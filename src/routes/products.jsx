@@ -1,21 +1,29 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-function getData() {
+function data() {
   fetch("https://fakestoreapi.com/products")
     .then((res) => res.json())
     .then((json) => console.log(json))
     .catch((error) => console.error("Error fetching data:", error));
+
+  return { data };
 }
+
+const displayData = [
+  {category: "Men's Clothing", Image: ""}
+]
 
 function Products() {
   useEffect(() => {
-    getData();
+    data();
   }, []);
-
+``
   return (
-    <div>
-      <h1>{getData}</h1>
-    </div>
+    <>
+      <h2>Mens Clothing</h2>
+      <ul></ul>
+    </>
   );
 }
 
