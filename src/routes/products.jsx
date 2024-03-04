@@ -10,18 +10,15 @@ function data() {
   return { data };
 }
 
-const displayData = [
-  {category: "Men's Clothing", Image: ""}
-]
-
 function Products() {
   useEffect(() => {
     data();
   }, []);
-``
+  ``;
   return (
     <>
       <h2>Mens Clothing</h2>
+
       <ul></ul>
     </>
   );
